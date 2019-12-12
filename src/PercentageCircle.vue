@@ -1,7 +1,8 @@
 <template>
 	<div
+		@click="(e) => $emit('click', e)"
 		class="c100"
-		:class="[`p${percent}`, complete ? primary : secondary, size]">
+		:class="[`p${percent}`, !complete ? activeColor : completeColor, size]">
 	    <span>{{percent}}%</span>
 	    <div class="slice">
 	        <div class="bar"></div>
@@ -21,11 +22,11 @@
 				type: String,
 				default: 'small'
 			},
-			primary: {
+			activeColor: {
 				type: String,
-				default: 'green'
+				default: 'blue'
 			},
-			secondary: {
+			completeColor: {
 				type: String,
 				default: ''
 			}
