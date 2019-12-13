@@ -19,7 +19,7 @@ const percentOptions = {
 const refreshRateOptions = {
    range: true,
    min: 5,
-   max: 500,
+   max: 50,
    step: 5,
 }
 
