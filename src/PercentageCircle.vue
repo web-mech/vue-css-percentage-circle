@@ -33,6 +33,10 @@
 			animate: {
 				type: Boolean,
 				default: false
+			},
+			refreshRate: {
+				type: Number,
+				default: 5
 			}
 		},
 		computed: {
@@ -42,23 +46,22 @@
 		},
 		watch: {
 			percent(percent) {
-				this.checkAnimateTo()
+				this.setPercent()
 			}
 		},
 		data() {
 			return {
 				innerPercent: 0,
-				timeout: null,
-				animationFrame: null
+				timeout: null
 			}
 		},
 		mounted() {
-			this.checkAnimateTo()
+			this.setPercent()
 		},
 		methods: {
-			checkAnimateTo() {
+			setPercent() {
 				if (this.animate) {
-					this.animateTo(true)
+					this.stepTo(true)
 				} else {
 					this.innerPercent = this.percent
 				}
@@ -69,9 +72,7 @@
 					timeout: null
 				})
 			},
-			animateTo(topFrame = false) {
-				
-
+			stepTo(topFrame = false) {
 				if (topFrame) {
 					this.clearTimeout()		
 				}
@@ -84,17 +85,16 @@
 					this.innerPercent--
 				}
 
-		      	if (this.innerPercent !== this.percent) {
-		        	this.timeout = setTimeout(() =>{
-		        		this.animateTo()
-		        	}, 5)
-		        	return
-		      	}
+				if (this.innerPercent !== this.percent) {
+					this.timeout = setTimeout(() => {
+						this.stepTo()
+					}, this.refreshRate)
+				}
 			}
 		}
 	}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 	@import '~css-percentage-circle'
 </style>
