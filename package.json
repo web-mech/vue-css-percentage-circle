@@ -2,7 +2,7 @@
   "name": "vue-css-percentage-circle",
   "version": "1.0.0",
   "description": "VueJS Powered css-percentage-circle",
-  "main": "index.js",
+  "main": "src/PercentageCircle.vue",
   "scripts": {
     "dev": "npm run storybook",
     "test": "echo \"Error: no test specified\" && exit 1",
