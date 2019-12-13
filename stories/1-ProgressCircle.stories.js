@@ -16,6 +16,13 @@ const percentOptions = {
    step: 1,
 }
 
+const refreshRateOptions = {
+   range: true,
+   min: 5,
+   max: 500,
+   step: 5,
+}
+
 const sizeOptions = {
   Small: 'small',
   Medium: '',
@@ -59,6 +66,9 @@ export const Animated = () => ({
     percent: {
       default: number('Percent', 50, percentOptions)
     },
+    refreshRate: {
+      default: number('Refresh Rate (milliseconds) ', 5, refreshRateOptions)
+    },
     size: {
       default: select('Size', sizeOptions, 'small')
     },
@@ -76,6 +86,7 @@ export const Animated = () => ({
       :percent="percent"
       :size="size"
       :active-color="activeColor"
+      :refresh-rate="refreshRate"
       :complete-color="completeColor">
     </PercentageCircle>`,
   data() {
