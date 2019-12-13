@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "githubp:web-mech/vue-css-percentage-circle.git"
+    "url": "git@github.com:web-mech/vue-css-percentage-circle.git"
   },
   "keywords": [
     "css",
