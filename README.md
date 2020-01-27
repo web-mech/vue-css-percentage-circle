@@ -3,6 +3,19 @@
 Vue CSS Percentage Circle
 ==========================
 
+## Getting Started
+
+```
+npm install --save vue-css-percentage-circle
+```
+
+### Usage
+
+```
+<PercentageCircle :percent="50" />
+```
+
+
 ## API
 
 ### percentage-circle 
