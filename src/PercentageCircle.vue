@@ -25,21 +25,21 @@
 				default: 0
 			},
 			/**
-		     * Size of percentage circle [small, large, huge]
+		     * Size of percentage circle [micro, small, big]
 		     */
 			size: {
 				type: String,
 				default: 'small'
 			},
 			/**
-			 * Color when active.
+			 * Color when active. [blue, green, orange]
 			 */
 			activeColor: {
 				type: String,
 				default: 'blue'
 			},
 			/**
-			 * Color when complete.
+			 * Color when complete. [blue, green, orange]
 			 */
 			completeColor: {
 				type: String,
@@ -59,6 +59,10 @@
 				type: Number,
 				default: 5
 			},
+
+			/**
+			 * Toggle between normal and dark themes
+			 */
 			darkMode: {
 				type: Boolean,
 				default: false
@@ -76,7 +80,13 @@
 		},
 		data() {
 			return {
+				/**
+				* @private
+				*/
 				innerPercent: 0,
+				/**
+				* @private
+				*/
 				timeout: null
 			}
 		},
@@ -84,6 +94,9 @@
 			this.setPercent()
 		},
 		methods: {
+			/**
+			* @private
+			*/
 			setPercent() {
 				if (this.animate) {
 					this.stepTo(true)
@@ -91,12 +104,18 @@
 					this.innerPercent = this.percent
 				}
 			},
+			/**
+			* @private
+			*/
 			clearTimeout() {
 				clearTimeout(this.timeout)
 				Object.assign(this, {
 					timeout: null
 				})
 			},
+			/**
+			* @private
+			*/
 			stepTo(topFrame = false) {
 				if (topFrame) {
 					this.clearTimeout()		
@@ -116,11 +135,14 @@
 					}, this.refreshRate)
 				}
 			},
+			/**
+			* @private
+			*/
 			onClick(event) {
 				/**
 			     * Click event.
 			     *
-			     * @event success
+			     * @event click
 			     * @property {object} click event object
 			     */
 				this.$emit('click', event)
