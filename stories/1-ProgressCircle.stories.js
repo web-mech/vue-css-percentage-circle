@@ -1,6 +1,6 @@
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
-import { withKnobs, number, select } from '@storybook/addon-knobs'
+import { withKnobs, number, select, boolean } from '@storybook/addon-knobs'
 
 import PercentageCircle from '../src/PercentageCircle';
 
@@ -33,11 +33,8 @@ const sizeOptions = {
 
 const colorOptions = {
   Blue: '',
-  DarkMode: 'dark',
   Green: 'green',
-  GreenDarkmode: 'green dark',
   Orange: 'orange',
-  OrangeDark: 'orange dark',
 }
 
 export const KitchenSink = () => ({
@@ -54,9 +51,12 @@ export const KitchenSink = () => ({
     },
     completeColor: {
       default: select('Complete Color', colorOptions, '')
+    },
+    darkMode: {
+      default: boolean('Dark Mode', false)
     }
   },
-  template: '<PercentageCircle @click="recountUp" :percent="percent" :size="size" :active-color="activeColor" :complete-color="completeColor"></PercentageCircle>',
+  template: '<PercentageCircle @click="recountUp" :percent="percent" :size="size" :active-color="activeColor" :complete-color="completeColor" :dark-mode="darkMode"></PercentageCircle>',
 });
 
 
@@ -77,6 +77,9 @@ export const Animated = () => ({
     },
     completeColor: {
       default: select('Complete Color', colorOptions, '')
+    },
+    darkMode: {
+      default: boolean('Dark Mode', false)
     }
   },
   template: `
@@ -87,6 +90,7 @@ export const Animated = () => ({
       :size="size"
       :active-color="activeColor"
       :refresh-rate="refreshRate"
+      :dark-mode="darkMode"
       :complete-color="completeColor">
     </PercentageCircle>`,
   data() {
