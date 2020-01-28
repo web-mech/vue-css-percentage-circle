@@ -27,6 +27,9 @@
     "css-percentage-circle": "^1.0.1",
     "vue": "^2.6.10"
   },
+  "peerDependencies": {
+    "vue": "^2.6.10"
+  },
   "devDependencies": {
     "@babel/core": "^7.7.5",
     "@storybook/addon-actions": "^5.2.8",
