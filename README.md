@@ -74,3 +74,16 @@ npm install --save vue-css-percentage-circle
 - `click` 
 
   Click event. 
+
+## Testing
+
+Storybook used for testing. To run storybook, run:
+```
+npm run dev
+```
+
+or
+
+```
+npm run storybook
+```
