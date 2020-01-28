@@ -69,6 +69,9 @@
 			}
 		},
 		computed: {
+			/**
+			* @private
+			*/
 			complete() {
 				return this.innerPercent == 100
 			}

@@ -15,6 +15,25 @@ npm install --save vue-css-percentage-circle
 <PercentageCircle :percent="50" />
 ```
 
+#### Theming
+
+```
+<PercentageCircle :percent="50" active-color="blue" complete-color="green"/>
+<PercentageCircle :percent="50" active-color="green" complete-color="orange"/>
+<PercentageCircle :percent="50" active-color="orange" complete-color="blue"/>
+```
+
+#### Animated
+
+```
+<PercentageCircle :percent="50" :animate="true"/>
+```
+
+#### Dark Mode
+
+```
+<PercentageCircle :percent="50" :dark-mode="true" />
+```
 
 ## API
 
@@ -28,15 +47,15 @@ npm install --save vue-css-percentage-circle
 
 - `size` ***String*** (*optional*) `default: 'small'` 
 
-  Size of percentage circle [small, large, huge] 
+  Size of percentage circle [micro, small, big] 
 
 - `active-color` ***String*** (*optional*) `default: 'blue'` 
 
-  Color when active. 
+  Color when active. [blue, green, orange] 
 
 - `complete-color` ***String*** (*optional*) `default: ''` 
 
-  Color when complete. 
+  Color when complete. [blue, green, orange] 
 
 - `animate` ***Boolean*** (*optional*) `default: false` 
 
@@ -46,34 +65,12 @@ npm install --save vue-css-percentage-circle
 
   Only applicable when animated is set to true. Speed in which animation changes happen 
 
-#### data 
+- `dark-mode` ***Boolean*** (*optional*) `default: false` 
 
-- `innerPercent` 
-
-**initial value:** `0` 
-
-- `timeout` 
-
-**initial value:** `null` 
-
-#### computed properties 
-
-- `complete` 
-
-   **dependencies:** `innerPercent` 
+  Toggle between normal and dark themes 
 
 #### events 
 
-- `success` 
+- `click` 
 
   Click event. 
-
-#### methods 
-
-- `setPercent()` 
-
-- `clearTimeout()` 
-
-- `stepTo()` 
-
-- `onClick(event)` 
