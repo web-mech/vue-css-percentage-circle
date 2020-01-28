@@ -25,7 +25,6 @@
   "license": "MIT",
   "dependencies": {
     "css-percentage-circle": "^1.0.1",
-    "vue": "^2.6.10"
   },
   "peerDependencies": {
     "vue": "^2.6.10"
@@ -44,6 +43,7 @@
     "node-sass": "^4.13.0",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.1",
+    "vue": "^2.6.10",
     "vue-loader": "^15.7.2",
     "vue-template-compiler": "^2.6.10"
   }
