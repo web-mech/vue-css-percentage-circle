@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/web-mech/vue-css-percentage-circle/compare/v1.1.3...v2.0.0) (2020-06-04)
+
+
+### build
+
+* **package:** bump css-percentage-circle to 2.0 ([f9f7c2e](https://github.com/web-mech/vue-css-percentage-circle/commit/f9f7c2e))
+
+
+### BREAKING CHANGES
+
+* **package:** bump css-percentage-circle to 2.0
+
+
+
 <a name="1.1.3"></a>
 ## [1.1.3](https://github.com/web-mech/vue-css-percentage-circle/compare/v1.1.2...v1.1.3) (2020-01-29)
 
