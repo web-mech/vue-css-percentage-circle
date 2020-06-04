@@ -26,7 +26,7 @@
   "author": "webmech@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "css-percentage-circle": "^1.0.1"
+    "css-percentage-circle": "^2.0.0"
   },
   "peerDependencies": {
     "vue": "^2.6.10"
