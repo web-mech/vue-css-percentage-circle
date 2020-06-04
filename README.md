@@ -47,7 +47,7 @@ npm install --save vue-css-percentage-circle
 
 - `size` ***String*** (*optional*) `default: 'small'` 
 
-  Size of percentage circle [micro, small, big] 
+  Size of percentage circle [micro, small, medium, large, huge] 
 
 - `active-color` ***String*** (*optional*) `default: 'blue'` 
 

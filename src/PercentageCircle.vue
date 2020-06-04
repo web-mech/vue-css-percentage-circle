@@ -25,7 +25,7 @@
 				default: 0
 			},
 			/**
-		     * Size of percentage circle [micro, small, big]
+		     * Size of percentage circle [micro, small, medium, large, huge]
 		     */
 			size: {
 				type: String,
