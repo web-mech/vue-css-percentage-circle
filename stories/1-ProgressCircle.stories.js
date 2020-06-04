@@ -25,10 +25,11 @@ const refreshRateOptions = {
 
 const sizeOptions = {
   Small: 'small',
-  Medium: '',
-  Large: 'big',
+  Medium: 'medium',
+  Large: 'large',
+  Huge: 'huge',
   Micro: 'micro',
-  None: 'small',
+  None: 'medium',
 }
 
 const colorOptions = {
